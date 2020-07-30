@@ -127,9 +127,8 @@ include 'db.php';
                 echo '
             <li><div id="mySidenav" class="sidenav">
   <a  class="closebtn" onclick="closeNav()">&times;</a>
-  <a  onclick="openProfilePage()">Profile</p>
+  <a  onclick="openAdminPage()">Admin Page</a>
   <a  onclick="openHistoryPage()">Purchase History</a>
-  <a  onclick="openAdminPage()">Admin Page</a> 
   <a href="logout.php">Logout</a>
 </div></li>
 <span style="font-size:30px;cursor:pointer; color:#FFFFFF" onclick="openNav()">&#9776;</span>

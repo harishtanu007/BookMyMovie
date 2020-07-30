@@ -30,7 +30,7 @@ include 'db.php';
 <?php 
 include 'header.php';
 ?>
- <div class="container" style="padding-top: 60px">
+ <div class="container" style="padding-top: 80px">
 
   <div class="panel with-nav-tabs panel-success">
     <div class="panel-heading">

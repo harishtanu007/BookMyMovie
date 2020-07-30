@@ -86,7 +86,7 @@ function RegistrationAjax(e){
     var re_password=$('#registrationPassword_confirmation').val();
     var email=$('#registrationEmail').val();
     var phone=$('#registrationPhone').val();
-
+    var image=$('#registrationImage').val();
     if (!userName=="") {
 
         if (!password=="") {
@@ -96,9 +96,12 @@ function RegistrationAjax(e){
              if (!(password==re_password)) {
                shakeModal("password didn't match");
            }else{
+               if(!email=="")
+               {
              // window.location.replace("about.html"); 
-            
-             $.post('registration.php',{postName:userName,postPassword:password,postEmail:email,postPhone:phone},
+            if(!phone=="")
+            {
+             $.post('registration.php',{postName:userName,postPassword:password,postEmail:email,postPhone:phone,postImage:image},
                 function(data)
                 {
 
@@ -115,6 +118,14 @@ function RegistrationAjax(e){
                 }
             });
         }
+        else{
+            shakeModal("phone cannot be empty");
+        }
+    }
+    else{
+        shakeModal("email cannot be empty");
+    }
+}
         
     }
      else{

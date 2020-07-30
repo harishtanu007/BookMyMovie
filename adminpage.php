@@ -37,22 +37,11 @@ if (!(($_SESSION['user'])==1)) {
 			$_SESSION['msg']="";
 
 		}
-		include 'profile.php';
+		include 'adminprofile.php';
 		?>
 		<div class="container" >
 			
-			<div class="row">
-				<div class="col-md-4">
-					<a style="width: 100%; text-align: center;" href="AddMovie.php" class="myButton">Add Movie</a>
-				</div>
-				<div  class="col-md-4">
-					<a style="width: 100%; text-align: center; margin-top: .5vw;" href="addtheater.php" class="myButton">Add Theater </a>
-				</div>
-				<div  class="col-md-4">
-					<a style="width: 100%; text-align: center; margin-top: .5vw;" href="addTimeSlot.php" class="myButton"> Add Time Slot </a>
-				</div>
-			</div> 
-
+		
 		</div>
 	</body>
 	<?php include 'footer.php'; ?>

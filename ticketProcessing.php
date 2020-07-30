@@ -32,7 +32,7 @@ include 'db.php';?>
 </head>
 <body>
 	<?php include_once 'header.php'; ?>
-	<div class="container" style="padding-top: 40px">
+	<div class="container" style="padding-top: 80px">
 		<div class="row">
 			<div class="col-xs-12  toppad" >
 				<div class="panel panel-info">

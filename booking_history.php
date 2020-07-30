@@ -51,7 +51,7 @@ include 'header.php';
          
 		//	$res=$conn->query("SELECT * FROM bookings where userId= '" . $user_id . "' ;");
 		//	$res=$conn->query("SELECT * FROM movielist WHERE movieId IN (SELECT id FROM bookings WHERE userId='" . $user_id . "');");
-			$res=$conn->query("SELECT bookings.date,bookings.time,bookings.venue,bookings.seat,bookings.amount,bookings.paymentMode,bookings.movieDate,bookings.movieTime,movielist.Name, movielist.image
+			$res=$conn->query("SELECT bookings.bookingID,bookings.date,bookings.time,bookings.venue,bookings.seat,bookings.amount,bookings.paymentMode,bookings.movieDate,bookings.movieTime,movielist.Name, movielist.image,movielist.movieId
 			FROM bookings
 			INNER JOIN movielist ON bookings.movieID=movielist.movieId and bookings.userID=$user_id;");
           while ($row=$res->fetch_object()) {
@@ -89,13 +89,19 @@ include 'header.php';
                     <div class='content'>
                       <div class='main'>
                         <h4 class='text-center'>".$row->Name ."</h4>
+
+                        <p style='padding-top:8px;'><b>Booked on : </b>".$row->date." ".$row->time."</p>
+
+                        <p class='profession' style='padding-top:8px;'><b>Payment mode: </b>".$row->paymentMode ."</p>
+
+						<p class='profession' style='padding-top:8px;'><b>Amount Paid: </b> " .$row->amount ."</p>
                         
                       </div>
                       <div style='margin-top: 4vw;' class='buy_ticket'>
 
-                       <form action='ticketProcessing.php' method='post' >
-                        
-                        <input type='submit'  class='btn btn-primary btn-xs btn-block' type='submit' value='Showtime and Details' name='submit'>
+                       <form action='Ticket.php' method='post' >
+                       <input type='hidden' name='bookingID' value='".$row->bookingID."' >
+                        <input type='submit'  class='btn btn-primary btn-xs btn-block' type='submit' value='View Ticket' name='submit'>
                       </form>
 
                     </div>

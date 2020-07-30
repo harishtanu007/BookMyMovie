@@ -37,7 +37,7 @@ include_once 'header.php';
 	</style>
 
 </head>
-<body>
+<body style="padding-top: 80px;">
 
 	<?php 
 	$movieId=$_SESSION['movieId'];

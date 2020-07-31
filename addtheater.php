@@ -102,7 +102,7 @@ class AddProduct{
 		$theaterName=$_POST['TheaterName'];
 		$stmt->execute();
 		$stmt->close();
-		$_SESSION['msg']="Theater Successfully  Added";
+		//$_SESSION['msg']="Theater Successfully  Added";
 		header ("Location: adminpage.php" );
 	}
 }

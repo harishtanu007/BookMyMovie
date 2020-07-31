@@ -12,6 +12,7 @@ include 'db.php';
 <head>
   <link href="https://bootswatch.com/flatly/bootstrap.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -34,8 +35,8 @@ include 'header.php';
 <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Inknut+Antiqua|Lora|Ravi+Prakash" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
 
-<div class="container" style="align-items: center;">
-  <h1 class="upcomming">upcomming gigs</h1>
+<div class="container" style="align-items: center; margin-top:80px;">
+  
 
   <?php 
 //for time slot
@@ -63,28 +64,28 @@ include 'header.php';
                             <div class="item-left">
                             
                             <div>
-                              <p class="event">'.$row->Name.'</p>
+                              <p class="event"><b>'.$row->Name.'</b></p>
                             
                               
                               <div class="sce">
                                 <div class="icon">
                                   <i class="fa fa-table"></i>
                                 </div>
-                                <p>Show Date : '.$row->movieDate.' <br/>Show Time : '.$row->movieTime.'</p>
+                                <p><b>Show Date : </b>'.$row->movieDate.' <br/><b>Show Time : </b>'.$row->movieTime.'</p>
                               </div>
                               <div class="fix"></div>
                               <div class="loc">
                                 <div class="icon">
                                   <i class="fa fa-map-marker"></i>
                                 </div>
-                                <p>Location : '.$row->venue.'</p>
+                                <p><b>Location : </b>'.$row->venue.'</p>
                               </div>
                               <div class="fix"></div>
                               <div class="sce">
                                 <div class="icon">
-                                  <i class="fa fa-address-book"></i>
+                                <i class="material-icons">event_seat</i>
                                 </div>
-                                <p>Seat : '.$row->seat.'</p>
+                                <p><b>Seat : </b>'.$row->seat.'</p>
                               </div>
                               <div class="fix"></div>
                               <button class="booked">Booked</button>

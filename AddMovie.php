@@ -106,7 +106,7 @@ if (isset($_POST['submit'] )&& !empty($_POST['submit']))
 	$Description=$_POST['description'];
 	if (!(empty($MovieName) || empty($Genre) || empty($Director) || empty($Description)|| empty($imdb=$_POST['imdb'])))
 	{
-		echo "<script>alert(Movie Added);</script>";
+		
 		$var=new AddProduct();
 		$var->productAdd($conn);
 
@@ -177,7 +177,7 @@ class AddProduct{
 
 
 		$stmt->close();
-		$_SESSION['msg']="Movie Successfully Added";
+		//$_SESSION['msg']="Movie Successfully Added";
 		header ("Location: adminpage.php" );
 
 	}

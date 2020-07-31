@@ -96,8 +96,8 @@ class AddProduct{
 		$timeSlot=$_POST['timeSlot'];
 		$stmt->execute();
 		$stmt->close();
-		$_SESSION['msg']="Time Slot Successfully Added";
-		header ("Location: adminpage.php" );
+		//$_SESSION['msg']="Time Slot Successfully Added";
+		//header ("Location: adminpage.php" );
 	}
 }
 ?>

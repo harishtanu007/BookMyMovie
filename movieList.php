@@ -26,7 +26,7 @@ include 'db.php';
   <link href="css/style.css" rel="stylesheet">
   <link href="css/anotherDefault.css" rel="stylesheet">
 </head>
-<body>
+<body >
 
  <div class="container">
 
@@ -43,16 +43,16 @@ include 'db.php';
       <option <?php echo (isset($_POST['Genre']) && $_POST['Genre'] == 'Adventure') ? 'selected="selected"' : '';?> value="Adventure">Adventure</option>
       <option <?php echo (isset($_POST['Genre']) && $_POST['Genre'] == 'Comedy') ? 'selected="selected"' : '';?> value="Comedy">Comedy</option>
       <option <?php echo (isset($_POST['Genre']) && $_POST['Genre'] == 'Drama') ? 'selected="selected"' : '';?> value="Drama">Drama</option>
-
+      <option <?php echo (isset($_POST['Genre']) && $_POST['Genre'] == 'Crime') ? 'selected="selected"' : '';?> value="Crime">Crime</option>
         </select>
        </form>
       </li>
       </ul>
     </div>
     <div class="panel-body">
-      <div class="tab-content">
+      <div class="tab-content" id="movielist">
         <div class="tab-pane fade in active" id="nowshowing">
-
+        
         
           <?php 
           $count=0;
@@ -75,6 +75,8 @@ include 'db.php';
               echo "<div class='row'>";
               $count=0;
             }
+
+            
 
             echo " 
             <div class='col-md-3 col-sm-12'>
@@ -121,6 +123,13 @@ include 'db.php';
 
             $count++;
           } ?>
+
+<script>
+function myFunction() {
+  var elmnt = document.getElementById("movielist");
+  elmnt.scrollIntoView();
+}
+</script>
 
 
           

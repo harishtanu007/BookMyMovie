@@ -92,9 +92,9 @@
     border-radius: 4px 4px 0 0;
 }
 .card .cover img{
-    width: 100%;
-    max-height: 260px;
-    min-height: 240px;
+    
+    height: 260px !important;
+    width: 240px !important;
 }
 .card .user{
     border-radius: 50%;
@@ -103,6 +103,11 @@
     margin: -55px auto 0;
     overflow: hidden;
     width: 120px;
+}
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
 }
 .card .user img{
     background: none repeat scroll 0 0 #FFFFFF;

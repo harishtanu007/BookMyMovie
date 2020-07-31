@@ -114,8 +114,8 @@ include 'db.php';?>
 														</td>
 													</tr>	
 													<tr>									
-														<td colspan="2" width="100%">
-															<input class="btn btn-primary btn-xs btn-block" type="submit" name="submit" value="Request For Ticket">
+														<td colspan="2">
+															<input class="btn btn-primary btn-xs btn-block" style="width: 40%; margin: auto; margin-top:20px" type="submit" name="submit" value="Request For Ticket">
 														</td>
 													</tr>
 												</form>

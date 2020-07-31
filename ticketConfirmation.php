@@ -265,14 +265,7 @@ include_once 'header.php';
 										<td><strong>Ticket Price </strong></td>
 										<td> 300 </td>
 									</tr>
-									<tr>
-										<td><strong>Payment Mode</strong></td>
-										<td> <select name="payment_mode" id="payment_mode">
-											<option value="Debit Card">Debit Card</option>
-											<option value="Credit Card">Credit Card</option>
-											<option value="Paypal">Paypal</option>
-											</select> </td>
-									</tr>
+									
 									<form action="seatReducing.php" method="post">
 										<input type="hidden" name="showOrderId" value=<?php echo '"'.$showOrder.'"'; ?>>
 
@@ -286,13 +279,18 @@ include_once 'header.php';
 
 										<input type="hidden" name="movie_id" value=<?php echo '"'.$movieId.'"'; ?>>
 
-										<input type="hidden" name="user_id" value=<?php echo '"'.$_SESSION['userId'].'"'; ?>>
+										<input type="hidden" name="user_id" value=<?php echo '"'.$_SESSION['user'].'"'; ?>>
 
 										<input type="hidden" name="amount" value="300">
 
-										<input type="hidden" name="payment_mode" value=<?php echo 'Debit Card'; ?>>
-
-										<input type="hidden" name="seat" value=<?php echo '"'.$seatCount.'"'; ?>>
+										<tr>
+										<td><strong>Payment Mode</strong></td>
+										<td> <select name="payment_mode" id="payment_mode">
+											<option value="Debit Card">Debit Card</option>
+											<option value="Credit Card">Credit Card</option>
+											<option value="Paypal">Paypal</option>
+											</select> </td>
+									</tr>
 
 										<tr>
 											<td colspan="2" width="100%">

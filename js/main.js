@@ -86,7 +86,9 @@ function RegistrationAjax(e){
     var re_password=$('#registrationPassword_confirmation').val();
     var email=$('#registrationEmail').val();
     var phone=$('#registrationPhone').val();
-    var image=$('#registrationImage').val();
+
+
+
     if (!userName=="") {
 
         if (!password=="") {
@@ -101,7 +103,7 @@ function RegistrationAjax(e){
              // window.location.replace("about.html"); 
             if(!phone=="")
             {
-             $.post('registration.php',{postName:userName,postPassword:password,postEmail:email,postPhone:phone,postImage:image},
+             $.post('registration.php',{postName:userName,postPassword:password,postEmail:email,postPhone:phone},
                 function(data)
                 {
 
@@ -219,7 +221,8 @@ function registrationComplete(){
     $('.error').addClass('alert successfully-submit').html("Registration Complete,Please LogIn");
     $('input[type="password"]').val('');
     $('input[type="text"]').val('');
-
+    $('input[type="email"]').val('');
+    $('input[type="tel"]').val('');
     setTimeout( function(){ 
         $('#loginModal .modal-dialog').removeClass(''); 
     }, 1000 ); 

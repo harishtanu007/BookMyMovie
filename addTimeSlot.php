@@ -57,9 +57,9 @@
 				<p class="copyright"></p>
 
 			</form>
-			<div class="wrapper">
+			<!-- <div class="wrapper">
 				<button style="text-align: center;" class="btn btn-default" onclick="document.location.href='adminpage.php'" ><span class='glyphicon glyphicon-chevron-left'> </span>BACK TO THE ADMIN PAGE</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 

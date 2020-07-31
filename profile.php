@@ -24,9 +24,17 @@ include 'header.php';
 			<div class="wrapper">
     <div class="left" style="width:80%">
 	<?php
+	if($row->image!="")
+	{
 	echo" 
 	<img src='userimages/".$row->image."' alt='user' width='100'/> 
-	"
+	";
+	}
+	else{
+		echo" 
+	<img src='userimages/user.jpg' alt='user' width='100'/> 
+	";
+	}
 	?>
         
 		<?php 

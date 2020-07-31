@@ -52,6 +52,6 @@ else{
 else{
 	echo "Error: " . $sql . "<br>" . $conn->error;
 }
-header('Location: ticketConfirmed.php')
+header('Location: booking_history.php')
 ?>
 

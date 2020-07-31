@@ -160,7 +160,7 @@ function closeNav() {
 
 
 function openHistoryPage(){
-  window.open("booking_history.php"); 
+  window.replace("booking_history.php"); 
   
 }
 </script>

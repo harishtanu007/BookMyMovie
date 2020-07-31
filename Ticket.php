@@ -46,15 +46,15 @@ include 'header.php';
 							$_SESSION['bookingID']=$bookingID;
 							$res=$conn->query("SELECT bookings.bookingID,bookings.date,bookings.time,bookings.venue,bookings.seat,bookings.amount,bookings.paymentMode,bookings.movieDate,bookings.movieTime,movielist.Name, movielist.image,movielist.movieId
               FROM bookings
-              INNER JOIN movielist ON bookings.bookingID=$bookingID and bookings.userID=$user_id;");
-							$row=$res->fetch_object();
+              INNER JOIN movielist ON bookings.movieID=movielist.movieId and bookings.bookingID=$bookingID; ");
+							$row=$res->fetch_object ();
 
 							echo '<div class="item">
                             <div class="item-right">
 
                             
                             <div class="cover">
-                            <img src="uploadimages/'.$row->image.'"/> 
+                            <img class="image" src="uploadimages/'.$row->image.'"/> 
                           </div>
                               <span class="up-border"></span>
                               <span class="down-border"></span>
@@ -70,20 +70,21 @@ include 'header.php';
                                 <div class="icon">
                                   <i class="fa fa-table"></i>
                                 </div>
-                                <p>'.$row->movieDate.' <br/> '.$row->movieTime.'</p>
+                                <p>Show Date : '.$row->movieDate.' <br/>Show Time : '.$row->movieTime.'</p>
                               </div>
                               <div class="fix"></div>
                               <div class="loc">
                                 <div class="icon">
                                   <i class="fa fa-map-marker"></i>
                                 </div>
-                                <p>'.$row->venue.'</p>
+                                <p>Location : '.$row->venue.'</p>
                               </div>
+                              <div class="fix"></div>
                               <div class="sce">
                                 <div class="icon">
-                                  <i class="fa fa-table"></i>
+                                  <i class="fa fa-address-book"></i>
                                 </div>
-                                <p>'.$row->seat.'</p>
+                                <p>Seat : '.$row->seat.'</p>
                               </div>
                               <div class="fix"></div>
                               <button class="booked">Booked</button>

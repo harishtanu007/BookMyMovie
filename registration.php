@@ -14,7 +14,6 @@
  $pass=$_REQUEST['postPassword'];
  $email_id=$_REQUEST['postEmail'];
  $phone_number=$_REQUEST['postPhone'];
- $image=$_REQUEST['postImage'];
  
 
  if ($user=="" || $pass=="" || $email_id=="" || $phone_number=="") {
@@ -37,7 +36,7 @@
 
       echo "1";//registration complete
       $data=new Deliveryman();
-      $var= $data->initialize($conn,$user,$pass,$email_id,$phone_number,$image);
+      $var= $data->initialize($conn,$user,$pass,$email_id,$phone_number);
 
     }
   }
@@ -46,13 +45,13 @@
   class Deliveryman
   {
 
-    function initialize($conn,$user,$pass,$email_id,$phone_number,$image)
+    function initialize($conn,$user,$pass,$email_id,$phone_number)
     {
-      $sql="insert into user( userID,userName, password,status,email,phone,image) values('',?,?,202,?,?,?);";
+      $sql="insert into user( userID,userName, password,status,email,phone) values('',?,?,202,?,?);";
 
       if (($stmt=$conn->prepare($sql))
         ) {
-        $stmt->bind_param("sssss",$userName,$password,$email,$phone,$userimage);
+        $stmt->bind_param("ssss",$userName,$password,$email,$phone);
 
 
     }else
@@ -66,28 +65,11 @@
     $email=$email_id;
     $phone=$phone_number;
 
-    $target="userimages/".basename($image);
-		$userimage= basename($image);
-    $image_tmp= $_FILES["postImage"]["tmp_name"];
+    // $target="userimages/".basename($image);
+		// $userimage= basename($image);
+    // $image_tmp= $_FILES["postImage"]["tmp_name"];
     
-    if ($stmt->execute()) {
-
-
-
-			if(move_uploaded_file($image_tmp, $target))
-			{
-
-				echo "<script>alert('Movie Successfully Added');</script>";
-
-			}
-			else{
-
-				echo "<script>alert('Movie failed to add');</script>";
-
-
-
-			}
-		}
+    $stmt->execute(); 
 
 
     $stmt->close();

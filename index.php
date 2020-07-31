@@ -87,7 +87,7 @@ include 'header.php';
                     <input id="registrationPassword_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
                     <input id="registrationEmail" class="form-control" type="email" placeholder="Email" name="email">
                     <input id="registrationPhone" class="form-control" type="tel" placeholder="Phone Number" name="phone">
-                    <input id="registrationImage" style="padding: 10px;" class="form-control" type="file" name="image" required autofocus>
+                    <!-- <input id="registrationImage" style="padding: 10px;" class="form-control" type="file" name="image" required autofocus> -->
                     <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit" onclick=" RegistrationAjax(event)">
                   </form>
                 </div>

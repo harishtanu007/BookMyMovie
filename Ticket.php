@@ -81,16 +81,25 @@ include 'header.php';
                                 <p><b>Location : </b>'.$row->venue.'</p>
                               </div>
                               <div class="fix"></div>
-                              <div class="sce">
+                              <div class="loc">
                                 <div class="icon">
                                 <i class="material-icons">event_seat</i>
                                 </div>
                                 <p><b>Seat : </b>'.$row->seat.'</p>
                               </div>
                               <div class="fix"></div>
+                              <div class="loc">
+                                <div class="icon">
+                                  <i class="fa fa fa-dollar"></i>
+                                </div>
+                                <p><b>Amount paid : </b>'.$row->amount.'</p>
+                              </div>
+                            </div>
+                              <div class="fix"></div>
                               <button class="booked">Booked</button>
                             </div> <!-- end item-right -->
-                            </div>
+                           
+                            
                           </div> <!-- end item -->
                           '?>
   

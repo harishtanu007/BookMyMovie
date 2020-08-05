@@ -9,7 +9,7 @@ include 'db.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="css/customerPanel.css">
 	<link href="js/bootstrap.min.css" rel='stylesheet' type='text/css' />
 </head>

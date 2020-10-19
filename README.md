@@ -26,3 +26,12 @@ BookMyMovie is a web application that lets you book the movie tickets near you b
 - **Booking History: Users can view previously made purchases.** 
 - **Ticket: Unique ticket will be generated for every booking made.** 
 - **Admin Actions: Admin has the access to Add Movie, Add Theatre and Add Time Slot.** 
+
+## Built With
+
+* [Xampp](https://www.apachefriends.org/index.html) - PHP development environment
+* [Visual Studio](https://visualstudio.microsoft.com/) - Development tool
+
+## Authors
+
+* **Harish Kunta** - *Initial work* - [Harish Kunta](https://github.com/harishtanu007)
